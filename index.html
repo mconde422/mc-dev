@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="flaticon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+            colors: {
+              primary: {
+                DEFAULT: '#ff6347', // tomato
+                50: '#fff0ed',
+                100: '#ffdcd5',
+                200: '#ffb6ad',
+                300: '#ff8f84',
+                400: '#ff695c',
+                500: '#ff6347',
+                600: '#db4329',
+                700: '#b02a17',
+                800: '#861e11',
+                900: '#5c130b'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <title>Mamadou CONDE</title>
+
+</head>
+<body id="mode" class="min-h-screen bg-slate-50 text-slate-900 dark:bg-[#0F172A] dark:text-slate-100 font-sans transition-colors">
+    <header class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-[#0F172A]/80 border-b border-slate-200 dark:border-slate-700 transition-colors">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="img/flaticon.png" alt="Profil" class="w-12 h-12 rounded-full">
+                <div>
+                    <h1 class="text-lg font-bold">Mamadou CONDE</h1>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Ingénieur HSE & Développeur Web Full‑Stack</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+                <a href="#home" class="hover:text-blue-600">Accueil</a>
+                <a href="#skills" class="hover:text-blue-600">Compétences</a>
+                <a href="#projects" class="hover:text-blue-600">Projets</a>
+                <a href="#about" class="hover:text-blue-600">À propos</a>
+                <a href="#contact" class="hover:text-blue-600">Contact</a>
+            </nav>
+            <button id="systeme-mode" class="px-3 py-1.5 rounded-md border border-slate-300 dark:border-slate-600 text-sm">Dark</button>
+        </div>
+    </header>
+
+    <main id="role-content" class="max-w-6xl mx-auto px-4 transition-all">
+        <section id="home" class="grid md:grid-cols-2 gap-10 items-center py-16 transition-colors">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">Construire un avenir plus sûr et plus durable</h2>
+                <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">Ingénieur en Génie Environnement & Sécurité Industriels et Développeur Web Full‑Stack. Je conçois des solutions efficaces, sécurisées et élégantes, du terrain à la production.</p>
+                <div class="mt-5 inline-flex items-center gap-2 bg-slate-200 dark:bg-slate-800 p-1 rounded-lg" role="group" aria-label="Choisir un profil">
+                    <button type="button" class="role-btn active px-3 py-1.5 rounded-md text-sm font-semibold text-white bg-blue-600 dark:bg-primary" data-role="hse" aria-pressed="true">Profil HSE</button>
+                    <button type="button" class="role-btn px-3 py-1.5 rounded-md text-sm font-semibold text-slate-800 dark:text-slate-100" data-role="dev" aria-pressed="false">Profil Dév</button>
+                </div>
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <button type="button" class="btn primary px-4 py-2 rounded-md bg-blue-600 dark:bg-primary text-white font-semibold" data-open="experience">Voir les expériences</button>
+                    <button type="button" class="btn px-4 py-2 rounded-md bg-slate-900 dark:bg-primary/80 text-white font-semibold" data-open="skills">Voir les compétences</button>
+                    <button type="button" class="btn ghost px-4 py-2 rounded-md border border-slate-400 dark:border-primary/60 dark:text-primary font-semibold" data-open="contact">Me contacter</button>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <img src="img/HSE.png" alt="Profil HSE" class="w-80 h-80 object-cover rounded-3xl shadow-lg">
+            </div>
+        </section>
+
+        <section id="experience" class="grid md:grid-cols-2 gap-10 items-center py-12 transition-colors">
+            <div>
+                <h3 class="text-2xl md:text-3xl font-bold">Des résultats mesurables, sur le terrain et en production</h3>
+                <p class="mt-3 text-slate-600 dark:text-slate-300">Sur des sites industriels comme dans le développement d'applications web, je structure, sécurise et optimise pour livrer rapidement des solutions fiables.</p>
+                <div class="mt-5 flex gap-3">
+                    <a class="px-4 py-2 rounded-md bg-slate-900 dark:bg-primary text-white font-semibold" href="#projects">Découvrir les projets</a>
+                    <a class="px-4 py-2 rounded-md border border-slate-400 dark:border-primary/60 dark:text-primary font-semibold" id="cv-download" href="CV Mamadou CONDE.pdf" download>Télécharger mon CV</a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <img src="img/dev.png" alt="Profil Développeur" class="w-80 h-80 object-cover rounded-3xl shadow-lg">
+            </div>
+        </section>
+
+        <section id="skills" class="py-12 transition-colors">
+            <h3 class="text-2xl md:text-3xl font-bold">Compétences</h3>
+            <div class="mt-6 grid sm:grid-cols-2 gap-6">
+                <article class="p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#0F172A]">
+                    <h4 class="text-lg font-semibold">HSE / Environnement</h4>
+                    <ul class="mt-3 space-y-1 text-slate-600 dark:text-slate-300 list-disc pl-5">
+                        <li>Normes HSSE, évaluations des risques</li>
+                        <li>Contrôle de la pollution, audits environnementaux</li>
+                        <li>Rédaction procédures et rapports</li>
+                    </ul>
+                </article>
+                <article class="p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#0F172A]">
+                    <h4 class="text-lg font-semibold">Développement Web</h4>
+                    <ul class="mt-3 space-y-1 text-slate-600 dark:text-slate-300 list-disc pl-5">
+                        <li>Frontend: HTML5, CSS3, JavaScript (ES6+)</li>
+                        <li>Backend: Node.js, API REST (bases)</li>
+                        <li>Outils: Git, Render, bonnes pratiques UI</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="py-12 transition-colors">
+            <h3 class="text-2xl md:text-3xl font-bold">Projets</h3>
+            <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article class="p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#0F172A] shadow-sm">
+                    <h4 class="text-lg font-semibold">GUI-Food</h4>
+                    <p class="mt-2 text-slate-600 dark:text-slate-300">Application web de gestion de menus et commandes.</p>
+                    <a href="https://gui-food-1.onrender.com" target="_blank" rel="noopener" class="inline-block mt-3 text-blue-600 hover:underline font-semibold">Voir le projet →</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="py-12 transition-colors">
+            <h3 class="text-2xl md:text-3xl font-bold">À propos</h3>
+            <p class="mt-3 text-slate-600 dark:text-slate-300 max-w-3xl">Je combine rigueur industrielle et sens du design pour piloter des projets HSE et développer des interfaces web modernes. Mon approche: écouter, diagnostiquer, concevoir puis délivrer avec excellence.</p>
+        </section>
+
+        <section id="contact" class="py-12 transition-colors">
+            <h3 class="text-2xl md:text-3xl font-bold">Contact</h3>
+            <ul class="mt-4 flex flex-wrap gap-4 text-blue-600">
+                <li><a href="mailto:mconde043@gmail.com" class="hover:underline">mconde043@gmail.com</a></li>
+                <li><a href="tel:+224627369541" class="hover:underline">+224 627 36 95 41</a></li>
+                <li><a id="whatsapp-link" href="https://wa.me/224627369541" target="_blank" rel="noopener" class="hover:underline">WhatsApp</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="mt-16 border-t border-slate-800 bg-[#0F172A] text-slate-100 transition-colors">
+        <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="font-semibold">Informations Personnelles</h4>
+                <div class="mt-3 text-sm text-slate-300 space-y-1">
+                    <p>Mamadou CONDE</p>
+                    <p>Boké/Centre ville/Aéroport</p>
+                    <p><a href="tel:+224627369541" class="hover:underline text-primary">Tel: +224 627 36 95 41</a></p>
+                    <p><a href="mailto:mconde043@gmail.com" class="hover:underline text-primary">mconde043@gmail.com</a></p>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-semibold">Liens utiles</h4>
+                <ul class="mt-3 space-y-1 text-sm">
+                    <li><a href="#home" class="hover:underline text-slate-300 hover:text-primary">Accueil</a></li>
+                    <li><a href="#skills" class="hover:underline text-slate-300 hover:text-primary">Compétences</a></li>
+                    <li><a href="#about" class="hover:underline text-slate-300 hover:text-primary">À propos</a></li>
+                    <li><a href="#contact" class="hover:underline text-slate-300 hover:text-primary">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold">Réseaux Sociaux</h4>
+                <div class="mt-3 flex items-center gap-3">
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="p-2 rounded-md ring-1 ring-slate-600 hover:ring-primary"><img src="img/facebook.png" alt="facebook" class="w-5 h-5"></a>
+                    <a href="https://wa.me/224627369541" target="_blank" rel="noopener" aria-label="WhatsApp" class="p-2 rounded-md ring-1 ring-slate-600 hover:ring-primary"><img src="img/whatsapp.png" alt="whatsapp" class="w-5 h-5"></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="p-2 rounded-md ring-1 ring-slate-600 hover:ring-primary"><img src="img/instagram.png" alt="instagram" class="w-5 h-5"></a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok" class="p-2 rounded-md ring-1 ring-slate-600 hover:ring-primary"><img src="img/tik-tok.png" alt="tik-toc" class="w-5 h-5"></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube" class="p-2 rounded-md ring-1 ring-slate-600 hover:ring-primary"><img src="img/youtube.png" alt="youtube" class="w-5 h-5"></a>
+                    <a href="https://gui-food-1.onrender.com" target="_blank" rel="noopener" aria-label="Site projet" class="p-2 rounded-md ring-1 ring-slate-600 hover:ring-primary"><img src="img/globe.png" alt="globe" class="w-5 h-5"></a>
+                    <a href="https://telegram.org" target="_blank" rel="noopener" aria-label="Telegram" class="p-2 rounded-md ring-1 ring-slate-600 hover:ring-primary"><img src="img/telegram.png" alt="telegram" class="w-5 h-5"></a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-xs text-slate-400 pb-6">&copy; Tout droit réservé 2025</p>
+    </footer>
+
+    <!-- Modal container -->
+    <div class="modal hidden" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="fixed inset-0 bg-black/60 modal-backdrop" data-close="modal"></div>
+        <div class="fixed inset-0 flex items-center justify-center p-4">
+            <div class="modal-dialog w-full max-w-2xl rounded-2xl bg-white dark:bg-[#0F172A] text-slate-900 dark:text-slate-100 shadow-xl overflow-hidden transition-colors">
+                <header class="flex items-center justify-between px-5 py-4 border-b border-slate-200 dark:border-slate-700">
+                    <h3 id="modal-title" class="text-lg font-semibold">Titre</h3>
+                    <button type="button" class="modal-close text-2xl px-2" aria-label="Fermer" data-close="modal">×</button>
+                </header>
+                <div class="modal-body px-5 py-4" id="modal-body"></div>
+                <footer class="px-5 py-4 border-t border-slate-200 dark:border-slate-700">
+                    <button type="button" class="btn ghost px-4 py-2 rounded-md border border-slate-400 font-semibold" data-close="modal">Fermer</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
