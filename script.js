@@ -128,13 +128,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const getContent = (type, role) => {
         if (type === 'experience') {
             return role === 'hse'
-                ? { title: 'Expériences — Profil HSE', html: '<ul><li>SAG — Stage ouvrier: sensibilisation HSSE, contrôle EPI</li><li>Audit interne: cartographie des risques, plan d\'actions</li></ul>' }
-                : { title: 'Expériences — Profil Dév', html: '<ul><li>GUI-Food: app web présentation/commandes</li><li>Sites vitrines: intégration responsive, performance</li></ul>' };
+                ? { title: 'Expériences — Profil HSE', html: `<ul>
+                    <li><span class="font-bold">SAG — Stage ouvrier:</span> sensibilisation HSSE, contrôle EPI</li>
+                    <li>Audit interne: cartographie des risques, plan d\'actions</li>
+                    <li><span class="font-bold">PNUD - Bénévole (Be In):</span> Enquête sur le terrain</li>
+                    <li>Participation à la mise en œuvre de projet</li>
+                    <li>Rédaction de rapports d’activités</li>
+                    </ul>` 
+                }
+                : { title: 'Expériences — Profil Dév', html: `<ul>
+                    <li><span class="font-bold">GUI-Food:</span> app web présentation/commandes (OIF/DCLIC/SIMPLON)</li>
+                    <li><span class="font-bold">Sites vitrines:</span> intégration responsive, performance</li>
+                       <ul>
+                            <li><span class="font-bold">Formateur aux logiciels</span></li>
+                            <li>Pack office</li>
+                            <li>Adobe (Photoshop, Illustrator)</li>
+                            <li>ArcGis, MapSource, Global Mapper, Google Earth Pro, GPS</li>
+                            <li class="font-bold">Référence : <a href="tel: +224628591902" title="M Keita">+224 628 59 19 02</a></li>
+                       </ul>
+                    </ul>` 
+                };
         }
         if (type === 'skills') {
             return role === 'hse'
-                ? { title: 'Compétences — Profil HSE', html: '<ul><li>Normes HSSE, évaluations des risques</li><li>Gestion des déchets, ICPE (bases)</li><li>Rapports et procédures</li></ul>' }
-                : { title: 'Compétences — Profil Dév', html: '<ul><li>HTML, CSS, JavaScript (ES6+)</li><li>Node.js, API REST (bases)</li><li>Git, déploiement Render</li></ul>' };
+                ? { title: 'Compétences — Profil HSE', html: `<ul>
+                        <li>Normes HSSE, évaluations des risques</li>
+                        <li>Gestion des déchets, ICPE (bases)</li>
+                        <li>Rapports et procédures</li>
+                    </ul>` }
+                : { title: 'Compétences — Profil Dév', html: `<ul>
+                        <li>HTML, CSS, JavaScript (ES6+)</li>
+                        <li>Node.js, API REST (bases)</li>
+                        <li>Git, déploiement Render</li>
+                    </ul>` 
+                };
         }
         if (type === 'contact') {
             return { title: 'Contact', html: '<p>Envoyez-moi un message :</p><ul><li><a href="mailto:mconde043@gmail.com">mconde043@gmail.com</a></li><li><a href="tel:+224627369541">+224 627 36 95 41</a></li><li><a href="https://wa.me/224627369541" target="_blank" rel="noopener">WhatsApp</a></li></ul>' };
